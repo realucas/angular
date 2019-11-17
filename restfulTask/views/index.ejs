@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div class="container">
+                <h1>Jackalope Dashboard</h1>
+
+
+                <h1>Here are the Jackalopes!</h1>
+                <a href="/jackalopes/new"><button>Add a Jackalope</button></a>
+
+    <div id="jackalope">
+            <p>
+                <% for (var i in results) {%>
+                    
+                    <p>Name: <a href="/jackalopes/<%= results[i]._id%>"><%=results[i].name %></a></p>                    
+                    <p>Color: <%=results[i].color %></p>
+                    <p>Age: <%=results[i].age %></p>
+                    <hr>
+                <% } %>
+                <!-- order the quotes in descending order by date
+                and display the quotes inside quotation marks -->
+            </p>
+            </div>                                          
+    
+</body>
+</html>
